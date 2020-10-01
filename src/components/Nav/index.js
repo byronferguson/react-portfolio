@@ -1,25 +1,7 @@
 import React, { useState } from 'react';
 
-export default function Nav() {
+export default function Nav({ pages, currentPage, setCurrentPage }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pages = [
-    {
-      path: './index.html',
-      title: 'About Me',
-    },
-    {
-      path: './portofolio.html',
-      title: 'Portfolio',
-    },
-    {
-      path: './contact.html',
-      title: 'Contact',
-    },
-    {
-      path: './resume.html',
-      title: 'Resume',
-    },
-  ];
 
   return (
     <nav className="bg-white shadow" id="nav">
@@ -34,12 +16,12 @@ export default function Nav() {
 
             <div className="hidden sm:ml-6 sm:flex">
               {pages.map((page) => (
-                <a
-                  href={page.path}
+                <button
+                  onClick={() => setCurrentPage(page.slug)}
                   className="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
                 >
                   {page.title}
-                </a>
+                </button>
               ))}
             </div>
           </div>
