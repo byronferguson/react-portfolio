@@ -27,6 +27,7 @@ export default function Nav({ pages, currentPage, setCurrentPage }) {
                 <button
                   onClick={() => navigateTo(page.slug)}
                   className="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+                  key={page.slug}
                 >
                   {page.title}
                 </button>
@@ -38,7 +39,7 @@ export default function Nav({ pages, currentPage, setCurrentPage }) {
             {/* <!-- Mobile menu button --> */}
             <button
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-              ariaLabel="Main menu"
+              aria-label="Main menu"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {/* <!-- Icon when menu is closed. -->
@@ -56,7 +57,7 @@ export default function Nav({ pages, currentPage, setCurrentPage }) {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokewidth="2"
+                  strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
@@ -97,7 +98,7 @@ export default function Nav({ pages, currentPage, setCurrentPage }) {
             <button
               onClick={() => navigateTo(page.slug)}
               className="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
-              // className="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out"
+              key={page.slug}
             >
               {page.title}
             </button>

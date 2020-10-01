@@ -1,5 +1,4 @@
 import React from 'react';
-import PageHeader from '../../components/PageHeader';
 import profile from '../../assets/profile.jpg';
 import Page from '../../components/Page';
 

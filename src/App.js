@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 import AboutMe from './pages/AboutMe';
+import Portfolio from './pages/Portfolio';
 import './app.css';
-import { render } from '@testing-library/react';
 
 function App() {
   const pages = [
@@ -24,12 +24,12 @@ function App() {
       title: 'Resume',
     },
   ];
-  const [currentPage, setCurrentPage] = useState('about');
+  const [currentPage, setCurrentPage] = useState('portfolio');
 
   function renderPage() {
     switch (currentPage) {
       case 'portfolio':
-        return 'Portfolio';
+        return <Portfolio />;
       case 'contact':
         return 'Contact';
       case 'resume':
