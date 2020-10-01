@@ -8,6 +8,7 @@ export default function Footer() {
           <a
             href="//linkedin.com/in/byron-ferguson"
             target="_blank"
+            rel="noopener noreferrer"
             className="ml-6 text-gray-400 hover:text-gray-500"
           >
             <span className="sr-only">LinkedIn</span>
@@ -25,6 +26,7 @@ export default function Footer() {
           <a
             href="//github.com/byronferguson"
             target="_blank"
+            rel="noopener noreferrer"
             className="ml-6 text-gray-400 hover:text-gray-500"
           >
             <span className="sr-only">GitHub</span>
