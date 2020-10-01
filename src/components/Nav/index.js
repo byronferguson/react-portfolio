@@ -13,7 +13,10 @@ export default function Nav({ pages, currentPage, setCurrentPage }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
+            <div
+              className="flex-shrink-0 flex items-center cursor-pointer"
+              onClick={() => navigateTo('about')}
+            >
               <span className="inline-flex items-center px-1 pt-1 font-mono font-medium text-2xl leading-5 uppercase text-gray-900">
                 Byron
               </span>
