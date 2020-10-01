@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import Nav from './components/Nav';
 import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
+import Resume from './pages/Resume';
 import './app.css';
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
       title: 'Resume',
     },
   ];
-  const [currentPage, setCurrentPage] = useState('portfolio');
+  const [currentPage, setCurrentPage] = useState('resume');
 
   function renderPage() {
     switch (currentPage) {
@@ -33,7 +34,7 @@ function App() {
       case 'contact':
         return 'Contact';
       case 'resume':
-        return 'Resume';
+        return <Resume />;
       case 'about':
       default:
         return <AboutMe />;
