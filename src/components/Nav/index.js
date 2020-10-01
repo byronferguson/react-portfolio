@@ -3,6 +3,11 @@ import React, { useState } from 'react';
 export default function Nav({ pages, currentPage, setCurrentPage }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  function navigateTo(slug) {
+    setIsMenuOpen(false);
+    setCurrentPage(slug);
+  }
+
   return (
     <nav className="bg-white shadow" id="nav">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +22,7 @@ export default function Nav({ pages, currentPage, setCurrentPage }) {
             <div className="hidden sm:ml-6 sm:flex">
               {pages.map((page) => (
                 <button
-                  onClick={() => setCurrentPage(page.slug)}
+                  onClick={() => navigateTo(page.slug)}
                   className="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
                 >
                   {page.title}
@@ -86,13 +91,13 @@ export default function Nav({ pages, currentPage, setCurrentPage }) {
       <div className={`${isMenuOpen ? 'block' : 'hidden'} sm:hidden`}>
         <div className="pt-2 pb-3">
           {pages.map((page) => (
-            <a
-              href={page.path}
+            <button
+              onClick={() => navigateTo(page.slug)}
               className="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
               // className="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out"
             >
               {page.title}
-            </a>
+            </button>
           ))}
         </div>
       </div>
