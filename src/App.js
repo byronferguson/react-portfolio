@@ -24,7 +24,7 @@ function App() {
       title: 'Resume',
     },
   ];
-  const [currentPage, setCurrentPage] = useState('about');
+  const [currentPage, setCurrentPage] = useState('portfolio');
 
   function renderPage() {
     switch (currentPage) {
