@@ -1,9 +1,17 @@
-#nav {
-  grid-row-start: 1;
-  grid-row-end: 2;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
 }
 
-#content {
+#root {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
   background: #076585; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to bottom,
@@ -15,11 +23,4 @@
     #fff,
     #076585
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-#footer {
-  grid-row-start: 3;
-  grid-row-end: 4;
-
-  background: #076585;
 }
