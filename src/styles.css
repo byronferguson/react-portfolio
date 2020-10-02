@@ -941,12 +941,6 @@ img {
   color: rgba(160, 174, 192, var(--text-opacity));
 }
 
-.hover\:text-gray-700:hover {
-  --text-opacity: 1;
-  color: #4a5568;
-  color: rgba(74, 85, 104, var(--text-opacity));
-}
-
 .hover\:text-gray-800:hover {
   --text-opacity: 1;
   color: #2d3748;
@@ -963,12 +957,6 @@ img {
   --text-opacity: 1;
   color: #a0aec0;
   color: rgba(160, 174, 192, var(--text-opacity));
-}
-
-.focus\:text-gray-700:focus {
-  --text-opacity: 1;
-  color: #4a5568;
-  color: rgba(74, 85, 104, var(--text-opacity));
 }
 
 .focus\:text-gray-800:focus {
