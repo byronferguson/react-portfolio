@@ -45,8 +45,11 @@ export default function Resume() {
               </dt>
               <dd className="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
                 <ul className="border border-gray-200 rounded-md">
-                  {resume.skills.map((skill) => (
-                    <li className="pl-3 pr-4 py-3 flex items-center justify-between text-sm leading-5">
+                  {resume.skills.map((skill, idx) => (
+                    <li
+                      className="pl-3 pr-4 py-3 flex items-center justify-between text-sm leading-5"
+                      key={idx}
+                    >
                       {skill}
                     </li>
                   ))}

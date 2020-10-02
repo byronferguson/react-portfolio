@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 import AboutMe from './pages/AboutMe';
+import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import './app.css';
@@ -25,14 +26,14 @@ function App() {
       title: 'Resume',
     },
   ];
-  const [currentPage, setCurrentPage] = useState('resume');
+  const [currentPage, setCurrentPage] = useState('about');
 
   function renderPage() {
     switch (currentPage) {
       case 'portfolio':
         return <Portfolio />;
       case 'contact':
-        return 'Contact';
+        return <Contact />;
       case 'resume':
         return <Resume />;
       case 'about':
